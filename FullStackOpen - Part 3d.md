@@ -98,4 +98,55 @@ $ heroku config:set MONGODB_URI='mongodb+srv://fullstack:secretpasswordhere@clus
 
 ## [Lint](https://fullstackopen.com/en/part3/validation_and_es_lint#lint)
 
+"Install ESlint as a development dependency to the backend project with the command:"
+
+```bash
+npm install eslint --save-dev
+```
+
+"After this we can initialize a default ESlint configuration with the command:"
+
+```bash
+node_modules/.bin/eslint --init
+```
+
+> It is recommended to create a separate _npm script_ for linting:
+
+```json
+{
+  // ...
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    // ...
+    "lint": "eslint ."
+  },
+  // ...
+}
+```
+
+> Now the _npm run lint_ command will check every file in the project.
+
+> When you make changes to the _.eslintrc.js_ file, run the linter from the command line. This will verify that the configuration file is correctly formatted:
+
+```bash
+npm run lint
+```
+
+
+Make sure you create an `.eslintrc` file and include the `build` directory plus any additional files or folders you do not want linted.
+
+
+Lint error: '# [ESLint - 'process' is not defined](https://stackoverflow.com/questions/50894000/eslint-process-is-not-defined)'
+https://stackoverflow.com/questions/50894000/eslint-process-is-not-defined
+
+Solution was updated .eslintrc "browser" env to "node":
+
+```json
+'env': {
+  'browser': true,
+```
+
 You can find the code for our current application in its entirety in the _part3-7_ branch of [this github repository](https://github.com/fullstack-hy2020/part3-notes-backend/tree/part3-7).
+
+
