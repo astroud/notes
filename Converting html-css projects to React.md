@@ -23,3 +23,24 @@ PropTypes
 z-index
 - When positioning text over an image with `position: relative`. Setting a width and a background will extend over the image, but the text will break at the image's border. You need to use `top`, `bottom`, `left`, and `right` to [shift the text's position over the image](https://developer.mozilla.org/en-US/docs/Web/CSS/position#types_of_positioning).
 
+
+Animation
+- [React Animations Tutorial using React Transition Group (video)](https://www.youtube.com/watch?v=BZRyIOrWfHU)
+- [Animation Add-Ons](https://reactjs.org/docs/animation.html)
+- [React: How to Design Smooth Page Transitions and Animations](https://dev.to/admantium/react-how-to-design-smooth-page-transitions-and-animations-1fii)
+- [React Transition Group](http://reactcommunity.org/react-transition-group/)
+- [react-motion](https://github.com/chenglou/react-motion)
+- [React Spring](https://aleclarson.github.io/react-spring/v9/)
+
+
+## [[frontendmentor-coding-bootcamp-testimonials-slider](https://github.com/astroud/frontendmentor-coding-bootcamp-testimonials-slider)](https://github.com/astroud/frontendmentor-coding-bootcamp-testimonials-slider)
+
+Console warning when transitioning between slides:
+
+```
+Warning: findDOMNode is deprecated in StrictMode. findDOMNode was passed an instance of Transition which is inside StrictMode. Instead, add a ref directly to the element you want to reference. Learn more about using refs safely here: https://reactjs.org/link/strict-mode-find-node
+```
+
+[Forwarding refs to DOM components](https://reactjs.org/link/strict-mode-find-node)
+
+[React Transition Group](http://reactcommunity.org/react-transition-group/) [is causing the warning](https://www.kindacode.com/article/react-warning-finddomnode-is-deprecated-in-strictmode/).
