@@ -33,7 +33,7 @@ Animation
 - [React Spring](https://aleclarson.github.io/react-spring/v9/)
 
 
-## [[frontendmentor-coding-bootcamp-testimonials-slider](https://github.com/astroud/frontendmentor-coding-bootcamp-testimonials-slider)](https://github.com/astroud/frontendmentor-coding-bootcamp-testimonials-slider)
+## [frontendmentor-coding-bootcamp-testimonials-slider](https://github.com/astroud/frontendmentor-coding-bootcamp-testimonials-slider)
 
 Console warning when transitioning between slides:
 

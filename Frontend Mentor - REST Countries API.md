@@ -60,3 +60,79 @@ To add *onClick* to my `<CountryCard>`s, the *onClick* must go in the CountryCar
 
 <hr>
 
+[Understanding How To Render Arrays in React](https://www.digitalocean.com/community/conceptual_articles/understanding-how-to-render-arrays-in-react)
+
+[React - Cannot read property 'map' of undefined](https://www.debuggr.io/react-map-of-undefined/)
+
+TypeError: countryArray.map is not a function
+
+```console
+is my countryArray no longer an array? 
+{border: Array(3)}
+border: (3) ["alligator", "snake", "lizard"]
+__proto__: Object
+```
+
+The problem was: `const CountryLink = ( countryArray ) => {`
+
+I'd forgotten to destructure `countryArray` from props.
+
+Fix: `const CountryLink = ({ countryArray }) => {`
+
+<hr>
+
+To get object-fit to work, the `<img>`'s height and width needs to be defined. It's not sufficient to define the parent `<div>`'s dimensions.
+
+```
+export const FlagWrapper = styled.div`
+  width: 100%;
+  height: 10rem;
+  max-height: 10rem;
+  /* overflow: hidden; */
+
+  img {
+    width: 100%;
+    height: 10rem;
+    object-fit: cover;
+  }  
+`
+```
+
+<hr>
+
+[To add commas to population numbers](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toLocaleString)
+
+<hr>
+## Implementing the dropdown filtering
+
+[ReactJS: Dropdown menus](https://blog.campvanilla.com/reactjs-dropdown-menus-b6e06ae3a8fe)
+
+[8 awesome features of styled-components - LogRocket Blog](https://blog.logrocket.com/8-awesome-features-of-styled-components/)
+
+[HTML Inputs and Labels: A Love Story](https://css-tricks.com/html-inputs-and-labels-a-love-story/)
+
+✪ [ReactJS + styled components + pseudoClasses - Stack Overflow](https://stackoverflow.com/questions/44646621/reactjs-styled-components-pseudoclasses)
+
+[Building a Dropdown Menu Component With React Hooks](https://letsbuildui.dev/articles/building-a-dropdown-menu-component-with-react-hooks)
+
+<hr>
+Leave `useEffect`'s second parameter empty if you want it to only run once (like onload when pinging the countries api)
+
+<hr>
+## Fixing Darkmode Flash
+[The Quest for the Perfect Dark Mode](https://www.joshwcomeau.com/react/dark-mode/)
+
+<hr>
+## Adding a Loader
+
+[How to Build a Skeleton Loading Placeholder](https://letsbuildui.dev/articles/how-to-build-a-skeleton-loading-placeholder)
+
+<hr>
+
+## Darkmode Toggle Sfx
+[Announcing “use-sound”, a React Hook for Sound Effects — A React Hook for Sound Effects](https://www.joshwcomeau.com/react/announcing-use-sound-react-hook/)
+
+## a11y improvements
+[Why you should use focus styles - LogRocket Blog](https://blog.logrocket.com/why-you-should-use-focus-styles-193d58672c5c/)
+
+useful? https://allegra9.medium.com/add-focus-visible-to-your-react-application-7680994779e5
