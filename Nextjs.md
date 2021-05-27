@@ -59,3 +59,29 @@ During initial deploy to netlify (formerly a jekyll site), I got this error:
 Issue was an old version of Node being used.
 Solution: [Updating Node](https://docs.netlify.com/configure-builds/manage-dependencies/#node-js-and-javascript)
 
+
+
+```
+> Build error occurred
+Error: Build optimization failed: found page without a React Component as default export in
+pages/portfolio-projects
+```
+
+Problem: I had saved my PROJECTS object (for generating project cards) in the `/pages` director which next.js tried render as a page.
+
+Solution: Moved it to another folder.
+
+
+
+
+```
+13:17:28	Failed to compile.
+13:17:28	ModuleNotFoundError: Module not found: Error: Can't resolve './previewlink' in '/vercel/path0/components'
+13:17:28	> Build error occurred
+13:17:28	Error: > Build failed because of webpack errors
+13:17:28	    at /vercel/path0/node_modules/next/dist/build/index.js:17:924
+13:17:28	    at async Span.traceAsyncFn (/vercel/path0/node_modules/next/dist/telemetry/trace/trace.js:6:584)
+```
+
+Issue: `import PreviewLink from './previewlink'`
+The "L" in the filename isn't capitalized.
